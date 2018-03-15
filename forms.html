@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Demo</title>
+	<style>
+	html {
+		background-color: maroon;
+	}
+	</style>
+</head>
+<body>
+
+<!-- action - where the form send data to -->
+<!-- method - what HTTP method(POST/GET) -->
+
+<form action="http://www.wikipedia.org">
+	<label>
+		Username:
+		<input name="username" type="email" placeholder="username" required>
+	</label>
+	<label>
+		Password:
+		<input name="password" type="password" placeholder="your password">
+	</label>
+
+	<input type="submit">
+</form>
+
+<!-- radio button -->
+
+<p>Do you prefer cats or dogs?</p>
+
+<form>
+	<label for="dogs">Dogs: </label>
+	<input name="petChoice" id="dogs" type="radio" value="DOGS">
+	<label for="cats">Cats: </label>
+	<input name="petChoice" id="cats" type="radio" value="CATS">
+
+	<p>What's your favorite color?</p>
+
+	<select name="color">
+		<option value="superred">Red</option>
+		<option value="superorange">Orange</option>
+		<option>Yellow</option>
+		<option>Violet</option>
+	</select>
+
+	<p>What's your favorite color?</p>
+	<textarea name="paragraph" rows="25" cols="50"></textarea>
+	<p></p>
+	<button>Go!</button>
+</form>
+
+
+
+
+<input type="checkbox">
+
+</body>
+</html>

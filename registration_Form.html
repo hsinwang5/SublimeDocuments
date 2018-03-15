@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<style>
+	
+	</style>
+	<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+
+	<h1>Register</h1>
+
+	<form>
+		<div id="special">
+			<h1>Testing purposes</h1>
+			<label for="firstName">First Name: </label>
+			<input type="text" name="firstName" id="firstName">
+
+			<label for="lastName">Last Name: </label>
+			<input type="text" name="lastName" id="lastName">
+		</div>
+		
+		<div>
+			<label for="male">Male </label>
+			<input type="radio" name="gender" id="male">
+			<label for="Female">Female  </label>
+			<input type="radio" name="gender" id="female">
+			<label for="other">Other </label>
+			<input type="radio" name="gender" id="other">
+		</div>
+		
+		<div>
+			<label for="email">Email: </label>
+			<input type="email" id="email" name="email" required>
+			<label for="password">Password: </label>
+			<input type="password" id="password" name="password" pattern=".{5,10}" required
+			required title="password must be between 5 to 10 characters">
+		</div>
+		
+		<div>
+			<label for="birthday">Birthday: </label>
+			<select name="birthMonth">
+				<option>Month</option>
+				<option value="Feb">February</option>
+				<option value="Mar">March</option>
+			</select>
+		</div>
+		
+		<div>
+			<label for="checked">I agree to the terms and conditions</label>
+			<input type="checkbox" id="checked" name="isChecked">
+		</div>
+
+		<div>
+			<ul>
+				<li>
+					<input type="checkbox" name="emailOptIn" id="emailOptin">
+					<label for="emailOptin">Send me promotional emails!</label>
+				</li>
+			</ul>
+		</div>
+
+		<button>Submit</button>
+	</form>
+
+</body>
+</html>

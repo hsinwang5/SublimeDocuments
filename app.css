@@ -1,0 +1,28 @@
+h1 {
+	color: green;
+
+	border: 5px solid purple;
+}
+
+html {
+	background: url(http://cpsresources.com/wp-content/uploads/2014/12/9436-Matte-Woodgrain-Matte.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100%;
+}
+
+#special {
+	color: pink;
+}
+
+ul label {
+	color : pink;
+}
+
+h1 + label {
+	color: green;
+}
+
+label:nth-of-type(2) {
+	color: violet;
+}
