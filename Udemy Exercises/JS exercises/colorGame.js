@@ -1,4 +1,4 @@
-window.onload = function() {
+
 	//element containers
 	var titleBar = document.querySelector("#titleBar");
 	var RGB = document.querySelector(".RGB");
@@ -18,7 +18,7 @@ window.onload = function() {
 		for (let i = 0; i < 3; i++) {
 			arr[i] = random(255);
 		}
-		string = "rgb";
+		var string = "rgb";
 		string += "(" + arr[0] + ", " + arr[1] + ", " + arr[2] + ")";
 		return string;
 	}
@@ -43,6 +43,8 @@ window.onload = function() {
 		}
 		return arr;
 	}
+
+
 	//replaces the entire panels array minus listeners
 	// function removeListeners() {
 	// 	var original = document.querySelector("main");
@@ -102,4 +104,4 @@ window.onload = function() {
 	}
 
 	startNewGame(6);
-}
+
