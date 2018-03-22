@@ -89,5 +89,77 @@
                 including other objects, Objects can be nested.
             </li>
         </ul>
+
+        <h1>3-20-2018 Summary</h1>
+        <ul>
+            <li>objects - use || operator to fill in default values for objects 
+                when there is no property that exists for a certain object. 
+                The && object guards against retrieving properties from 
+                objects that do not exist
+            </li>
+            <li>node.js - starting node servers, basic echo exercise plus 
+                writing node programs, and 
+                using the command line to start node server. node server can be started
+                by using command [node app.js]. Can include a console.log to verify that 
+                the server started. Will run standard javascript with express routes.
+            </li>
+            <li>NPM - how to import different packages as well as how to 
+                use the API for those packages, how to install and read docs 
+                for packages. npm install [package name]
+            </li>
+            <li>Express framework - use require("express") and app = express() to 
+                set up framework. Set up routes using app.get([path], [function(req, res)])
+            </li>
+            <li>npm init creates a package.json file, which contains metadata info about the app 
+                we are making. NPM init automatically creates a pack.json file for us
+                and sets most everything up. 
+                Includes a list of dependencies (npm packages needed to run the app) 
+                which can be automatically added to the package.json as you install them
+                if you include the --save flag, ie npm install express --save
+            </li>
+            <li>creating routes using [app.get("/string/:xx", function(req, res))]. 
+                Adding : (colon) indicates the word can vary, and can be retrieved using 
+                [req.params.xx]. Params is a large object containing all the 
+                required properties info of the web page.
+            </li>
+            <li>the "*" modifier catches all routes, but since server routes are 
+                processed in order, putting a wildcard app.get as the first function 
+                will prevent all other functions from running. Only the first 
+                matching app.get will run. 
+            </li>
+        </ul>
+
+        <h1>3-21-2018 Summary</h1>
+        <ul>
+            <li>Algorithm - when comparing a single variable to another literal using 
+                if...=== statements, it becomes more efficient to definte an object literal
+                (dictionary) with key:value pairs to compare. 
+            </li>
+            <li>The const variable can be block-scoped like let, and is an immutable 
+                variable. Cannot be reassigned within its current scope. 
+            </li>
+            <li>[var obj2 = Object.create(obj) creates a prototype/decendant of obj
+                and assigns it to obj2. obj2 will have all the properties/methods of obj.
+                If obj's properties/methods are reassigned or overwritten, 
+                obj2 will update with those same properties. obj2's properties can 
+                also be written over and those will take precedence. 
+            </li>
+            <li>embedded Javascript - .ejs files allow res.render to send an 
+                actual html file to the browser. <% %> allows embedding of 
+                javascript into HTML, while <%= actually renders the javascript 
+                on the page. The package must be installed via npm install ejs --save.
+                res.render("home.ejs", {property, variable}) - syntax to set for EJA to 
+                render javascript variables onto the page. <%= property %> will show the variable. 
+            </li>
+            <li>folders can be creaed for templates and other css/js files. 
+                Views folder contains all EJS templates.
+            </li>
+            <li>app.use(express.static("public")); will make node look in public folders</li>
+            <li>app.set("view engine", "ejs"); removes the need to type .ejs at 
+                the end of every ejs file
+            </li>
+
+            </li>
+        </ul>
     </body>
 </html>
