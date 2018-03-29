@@ -158,8 +158,119 @@
             <li>app.set("view engine", "ejs"); removes the need to type .ejs at 
                 the end of every ejs file
             </li>
-
+                SRC in html5 specs allow 2 global attributes in html - defer and async
+                without those 2 attributes, the SRC embeds directly into the HTML.
+                <br>href is a reference to info for the current page - parsing 
+                of html is not stopped
+            </li>
+            <li>
+                app.post - use npm install body-parser --save to add the ability to 
+                parse submitted information into an object
+                <br>var bodyParser = require("body-parser");
+                <br>app.use(bodyParser.urlencoded({extended:true}));
+                <br>add the two above to get info from req.body.[name], 
+                where name is equal to the value defined in html input.
             </li>
         </ul>
+
+        <h1>3-22-2018 Summary</h1>
+        <ul>
+            <li>API's - application programming interface allows web app to retrieve 
+                information from various databases around the web 
+            </li>
+            <li>npm install request + var request = require("request"); sets up API call </li>
+            <li>request(endpoint, function(error, response, body) {
+                <br>if (!error && response.statusCode == 200) {} 
+                <br>sets up an api call to the web address specified at endpoint 
+            </li>
+            <li>some API's require keys. All API's return data in the form of either
+                JSON or XML, with JSON being the dominant format. JSON must be parsed 
+                into a javascript object using var x = JSON.parse(body);
+            </li>
+            <li>endpoints differe but all have the structure of 
+                <br>www.xxxxx.com?r=title&plot=true&etc=etc&webapi=w23221
+            </li>
+        </ul>
+
+        <h1>3-23-2018 Summary</h1>
+        <ul>
+            <li>./mongod starts mongo DB server, mongo gives stats</li>
+            <li>mongodb commands: 
+                <br>show dbs 
+                <br>use demo creates or uses database "demo"
+                <br>db.dogs.insert({name: "Rusty", breed: "Mutt"})
+                <br>db.dogs,find(parameter)
+                <br>db.dogs.delete will delete all matched parameters, use .limit to control how many deleted
+                <br>db.dogs.update({name: "Rusty"}, {$set: {name:"Tater", isCute: true}}) will update without 
+                replacing all fields, only specified fields
+            </li>
+        </ul>
+
+        <h1>3-25-2018 Summary</h1>
+        <ul>
+            <li>RESTful routing - 7 different routes with a consistent development pattern</li>
+            <li>different css libraries for different purposes - Bootstrap, Semantic-ui, etc</li>
+            <li>moongoose setup: 
+                <br>
+                var blogSchema = new mongoose.Schema({
+                    title: String,
+                    image: String,
+                    body: String,
+                    created: {type: Date, default: Date.now}
+                });
+                var Blog = mongoose.model("Blog", blogSchema);
+            </li>
+            <li>req.params.xx is used to retrive RESTful web route paramaters, like 
+                <br>www.reddit.com/dogs/:xxxxx <-- retrieves :xxxxx
+                <br>req.body.xx is used to retrive info from forms from name attribute. 
+                The name attributes can be grouped together using syntax 
+                name="blog[title]", which can later be retrieved using either 
+                req.body.blog or req.body.blog.title
+            </li>
+        </ul>
+
+        <h1>3-27-2018 Summary</h1>
+        <ul>
+            <li>node.js app dependencies %%%
+                <br>"body-parser": "^1.18.2", - parses req.params.id/body- app.use(bodyParser.urlencoded({extended: true}));
+                <br>"ejs": "^2.5.7", - app.set("view engine", "ejs"); (no require required)
+                <br>"express": "^4.16.3",
+                <br>"method-override": "^2.3.10", var methodOverride  = require("method-override"); app.use(methodOverride("_method"));
+                <br>"mongoose": "^5.0.11" mongoose.connect("mongodb://localhost/restful");
+                <br>"request": "^2.85.0" request(endpoint, function(err, response, body));
+                <br>"express-sanitizer": "^1.0.3", app.use(expressSanitizer()); - must come after body-parser
+                <br>Changing <%= top <%- will run all inputted text as code rather than displaying string
+                <br>========================================= Authentication packages
+                <br>"body-parser": "^1.18.2",
+                <br>"express": "^4.16.3",
+                <br>"express-session": "^1.15.6",
+                <br>"mongoose": "^5.0.12",
+                <br>"passport": "^0.4.0",
+                <br>"passport-local": "^1.0.0",
+                <br>"passport-local-mongoose": "^5.0.0"
+                <br>"ejs": "^2.5.7"
+            </li>
+        </ul>
+        <h1>3-28-2018 Summary</h1>
+        <ul>
+            <li>
+                ObjectId references: comments: [
+                <br> type: mongoose.Schema.Types.ObjectID,
+                <br>red:"Comment"
+                <br>]
+            </li>
+            <li>populating mongo objectId references: 
+                <br>Campground.findById(req.params.id).populate("comments").exec(function(err, campground){
+            </li>
+        </ul>
+            
+
+            (Angular)
+            Bespoke
+            Longstreet
+            Brandmovers
+            Cox automatically
+            ACI worldwide
+            USAN
     </body>
 </html>
