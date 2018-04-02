@@ -249,8 +249,10 @@
                 <br>"passport-local": "^1.0.0",
                 <br>"passport-local-mongoose": "^5.0.0"
                 <br>"ejs": "^2.5.7"
+                <br>Auth packages: npm install passport passport-local passport-local-mongoose express-session --save
             </li>
         </ul>
+
         <h1>3-28-2018 Summary</h1>
         <ul>
             <li>
@@ -263,14 +265,18 @@
                 <br>Campground.findById(req.params.id).populate("comments").exec(function(err, campground){
             </li>
         </ul>
-            
 
-            (Angular)
-            Bespoke
-            Longstreet
-            Brandmovers
-            Cox automatically
-            ACI worldwide
-            USAN
+        <h1>3-30-2018 Summary</h1>
+        <ul>
+            <li>Middleware - is executed before the callback function when accessing a route</li>
+            <li>can be created as a function and passed as a parameter inbetween the route string and callback</li>
+            <li>or passed in automatically using:
+                <br>app.use(function(req, res, next){
+                <br>res.locals.currentUser = req.user;
+                <br>next();
+                <br>});
+            </li>
+        </ul>
+            
     </body>
 </html>

@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+}
+
+form.edit {
+    width: 80%;
+    min-width: 400px;
+    margin: auto;
+}
+
+i.icon {
+    font-size: 2em;
+}
+
+body {
+    margin-top: 4em;
+}
+
+#dateString {
+    text-align: center;
+}
+
+#delete {
+    display: inline;
+}
+
+i.chevron {
+    line-height: 1em;
+    font-size: 1em;
+}
+
